@@ -63,6 +63,22 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
+			backgroundImage: {
+				'hero-gradient': 'var(--hero-gradient)',
+				'earth-gradient': 'var(--earth-gradient)',
+			},
+			boxShadow: {
+				'construction': 'var(--construction-shadow)',
+				'warm-glow': 'var(--warm-glow)',
+			},
+			transitionTimingFunction: {
+				'smooth': 'var(--smooth-transition)',
+				'bounce': 'var(--bounce-transition)',
+			},
+			fontFamily: {
+				'inter': ['Inter', 'system-ui', 'sans-serif'],
+				'poppins': ['Poppins', 'system-ui', 'sans-serif'],
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
