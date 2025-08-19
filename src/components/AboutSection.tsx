@@ -43,6 +43,24 @@ const AboutSection = () => {
 
             <div>
               <h3 className="font-poppins text-2xl font-semibold text-primary mb-4">
+                Our Vision
+              </h3>
+              <p className="font-inter text-muted-foreground leading-relaxed mb-6">
+                To be the leading construction and maintenance company in Mpumalanga, recognized for delivering innovative solutions, exceptional quality, and unmatched customer service while contributing to the growth and development of our local communities.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-poppins text-2xl font-semibold text-primary mb-4">
+                Our Mission
+              </h3>
+              <p className="font-inter text-muted-foreground leading-relaxed mb-6">
+                To provide comprehensive construction, maintenance, and engineering services that exceed client expectations through skilled craftsmanship, reliable partnerships, and commitment to safety and sustainability. We empower local communities by creating employment opportunities and supporting economic growth in the Witbank region.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-poppins text-2xl font-semibold text-primary mb-4">
                 Our Values
               </h3>
               <div className="grid sm:grid-cols-2 gap-4">

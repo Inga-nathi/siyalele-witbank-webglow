@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-construction.jpg";
+import siyaleleLogo from "@/assets/siyalele-logo.png";
 
 const HeroSection = () => {
   return (
@@ -12,6 +13,13 @@ const HeroSection = () => {
       
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center text-primary-foreground">
+        <div className="mb-8 animate-fade-in">
+          <img 
+            src={siyaleleLogo} 
+            alt="Siyalele Projects Logo" 
+            className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6 drop-shadow-2xl"
+          />
+        </div>
         <h1 className="font-poppins text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
           Siyalele Projects
         </h1>
