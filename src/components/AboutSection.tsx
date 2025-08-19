@@ -9,8 +9,8 @@ const AboutSection = () => {
           <h2 className="font-poppins text-4xl md:text-5xl font-bold text-primary mb-6">
             About Siyalele Projects
           </h2>
-          <p className="font-inter text-lg text-muted-foreground max-w-3xl mx-auto">
-            Founded in 2023, we are a locally-owned construction company serving Witbank and the greater Mpumalanga region with integrity, expertise, and commitment to excellence.
+          <p className="font-inter text-lg text-muted-foreground max-w-4xl mx-auto">
+            Siyalele Projects (PTY) LTD is a dynamic, locally-owned private company established on 9 January 2023, serving Witbank and the greater Mpumalanga region. We are a VAT-registered company specializing in comprehensive construction, maintenance, engineering solutions, and business consultation services.
           </p>
         </div>
 
@@ -18,10 +18,10 @@ const AboutSection = () => {
           <div className="space-y-8">
             <div>
               <h3 className="font-poppins text-2xl font-semibold text-primary mb-4">
-                Our Story
+                Our Company
               </h3>
               <p className="font-inter text-muted-foreground leading-relaxed">
-                Established on 9 January 2023, Siyalele Projects began with a vision to deliver exceptional construction and maintenance services to our local community. As a VAT-registered private company, we combine professional standards with the personal touch of a family-owned business.
+                Siyalele Projects (PTY) LTD was founded with a vision to deliver exceptional services across multiple sectors. As a VAT-registered private company with revenue under R1 million, we combine professional standards with the personal touch of a family-owned business. Located at Monet Street, Ben Fleur, Arabella Villas, House No. 9, 3364, Witbank (Emalahleni), Mpumalanga, we are strategically positioned to serve our local community and surrounding regions with dedication and expertise.
               </p>
             </div>
 

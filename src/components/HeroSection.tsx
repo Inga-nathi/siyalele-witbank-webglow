@@ -13,11 +13,11 @@ const HeroSection = () => {
       
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center text-primary-foreground">
-        <div className="mb-6 animate-fade-in">
+        <div className="mb-8 animate-fade-in">
           <img 
             src={siyaleleLogo} 
             alt="Siyalele Projects Logo" 
-            className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-4 drop-shadow-lg bg-white/10 backdrop-blur-sm rounded-full p-2"
+            className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6 drop-shadow-2xl hover-scale animate-pulse bg-white/5 backdrop-blur-sm rounded-full p-3 border border-white/20"
           />
         </div>
         <h1 className="font-poppins text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
