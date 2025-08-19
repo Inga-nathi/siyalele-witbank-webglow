@@ -1,27 +1,44 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const ServicesSection = () => {
   const services = [
     {
-      title: "General Construction",
-      description: "Complete construction solutions from foundation to finishing, delivering quality residential and commercial projects.",
-      features: ["New builds", "Renovations", "Extensions", "Commercial projects"]
+      title: "Contact Centre & Conferencing Equipment",
+      description: "Professional audio and communication solutions for modern business environments.",
+      features: ["Headsets & Accessories", "Conference Speakers", "Video Conferencing", "Wireless Solutions"],
+      icon: "📞"
     },
     {
-      title: "Maintenance Services", 
-      description: "Comprehensive maintenance and repair services to keep your property in excellent condition year-round.",
-      features: ["Property maintenance", "Repairs", "Preventive care", "Emergency services"]
+      title: "Consultation & HR Services", 
+      description: "Expert consultation services for social labour, HR policies, and business compliance needs.",
+      features: ["Social Labour Drafting", "HR Policies Review", "Training & Facilitation", "Business Auditing"],
+      icon: "👥"
     },
     {
-      title: "Project Management",
-      description: "Professional project oversight ensuring timely delivery, quality control, and budget management.",
-      features: ["Planning & design", "Timeline management", "Quality control", "Budget oversight"]
+      title: "General Engineering & Maintenance",
+      description: "Comprehensive engineering solutions with qualified personnel for industrial and commercial needs.",
+      features: ["Boiler Making", "Electrical Work", "Mechanical Services", "Structural Fabrication"],
+      icon: "🔧"
     },
     {
-      title: "Consultation",
-      description: "Expert advice and consultation services to help you make informed decisions about your construction needs.",
-      features: ["Site assessment", "Cost estimation", "Design consultation", "Compliance guidance"]
+      title: "Supply & Delivery Services",
+      description: "Complete supply chain solutions for construction, engineering, and office requirements.",
+      features: ["Construction Materials", "Engineering Components", "Office Supplies", "Machine Hire"],
+      icon: "🚛"
+    },
+    {
+      title: "Fencing Solutions",
+      description: "Professional fencing installation and maintenance for security and boundary requirements.",
+      features: ["Barbed Wire Fencing", "Chain Link Fencing", "Electric Fencing", "Security Solutions"],
+      icon: "🔒"
+    },
+    {
+      title: "Mining & Construction Equipment",
+      description: "Specialized equipment hire and supply for mining and construction projects.",
+      features: ["Heavy Machinery", "Construction Tools", "Mining Equipment", "Technical Support"],
+      icon: "🏗️"
     }
   ];
 
@@ -33,7 +50,7 @@ const ServicesSection = () => {
             Our Services
           </h2>
           <p className="font-inter text-lg text-muted-foreground max-w-3xl mx-auto">
-            We offer comprehensive construction and maintenance services tailored to meet the unique needs of our Witbank community.
+            We offer comprehensive solutions across engineering, construction, technology, and consultation services tailored to meet the diverse needs of our Witbank community and beyond.
           </p>
         </div>
 
@@ -41,9 +58,12 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <Card key={index} className="border-2 border-secondary hover:border-accent/50 transition-all duration-300 hover:shadow-construction group">
               <CardHeader className="pb-4">
-                <CardTitle className="font-poppins text-2xl text-primary group-hover:text-accent transition-colors">
-                  {service.title}
-                </CardTitle>
+                <div className="flex items-center gap-4 mb-2">
+                  <div className="text-4xl">{service.icon}</div>
+                  <CardTitle className="font-poppins text-2xl text-primary group-hover:text-accent transition-colors">
+                    {service.title}
+                  </CardTitle>
+                </div>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="font-inter text-muted-foreground leading-relaxed">
@@ -72,8 +92,8 @@ const ServicesSection = () => {
             <p className="font-inter text-muted-foreground mb-6">
               Contact us today for a free consultation and detailed quote for your construction or maintenance needs.
             </p>
-            <Button variant="professional" size="xl">
-              Request Free Quote
+            <Button variant="professional" size="xl" asChild>
+              <Link to="/services">View All Services</Link>
             </Button>
           </div>
         </div>
