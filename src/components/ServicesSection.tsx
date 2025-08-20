@@ -1,44 +1,45 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { createServiceWhatsAppLink } from "@/lib/whatsapp";
 import { Link } from "react-router-dom";
 
 const ServicesSection = () => {
   const services = [
     {
-      title: "Contact Centre & Conferencing Equipment",
-      description: "Professional audio and communication solutions for modern business environments.",
-      features: ["Headsets & Accessories", "Conference Speakers", "Video Conferencing", "Wireless Solutions"],
-      icon: "📞"
+      title: "Mining & Construction Supply",
+      description: "Comprehensive supply solutions for mining operations and construction projects.",
+      features: ["PPE & Safety Gear", "Construction Materials", "Engineering Tools", "Electrical & Mechanical Spares"],
+      icon: "⛏️"
     },
     {
-      title: "Consultation & HR Services", 
-      description: "Expert consultation services for social labour, HR policies, and business compliance needs.",
-      features: ["Social Labour Drafting", "HR Policies Review", "Training & Facilitation", "Business Auditing"],
-      icon: "👥"
-    },
-    {
-      title: "General Engineering & Maintenance",
-      description: "Comprehensive engineering solutions with qualified personnel for industrial and commercial needs.",
-      features: ["Boiler Making", "Electrical Work", "Mechanical Services", "Structural Fabrication"],
+      title: "General Engineering & Maintenance", 
+      description: "Expert engineering solutions and maintenance services for industrial operations.",
+      features: ["Equipment Installation & Maintenance", "Structural Engineering Solutions", "Electrical & Mechanical Repairs", "Civil Works & Support"],
       icon: "🔧"
     },
     {
-      title: "Supply & Delivery Services",
-      description: "Complete supply chain solutions for construction, engineering, and office requirements.",
-      features: ["Construction Materials", "Engineering Components", "Office Supplies", "Machine Hire"],
-      icon: "🚛"
+      title: "HR Consultation & Social Labour Plan (SLP) Services",
+      description: "Professional HR consultation and Social Labour Plan (SLP) development services.",
+      features: ["Expert HR Solutions", "Social Labour Plan Development", "Employment Equity Plans", "Workplace Skills Development"],
+      icon: "👥"
     },
     {
-      title: "Fencing Solutions",
-      description: "Professional fencing installation and maintenance for security and boundary requirements.",
-      features: ["Barbed Wire Fencing", "Chain Link Fencing", "Electric Fencing", "Security Solutions"],
+      title: "Environmental Management",
+      description: "Comprehensive environmental management and remediation services.",
+      features: ["Waste Management", "Pollution Control Management", "Siltrap Management", "Vacuum Truck Services"],
+      icon: "🌱"
+    },
+    {
+      title: "Contract Catering & Conferencing Equipment",
+      description: "Professional catering services and modern conferencing equipment solutions.",
+      features: ["Catering Services", "Office & Conferencing Equipment", "Audio-Visual Solutions", "Professional Catering Support"],
+      icon: "🍽️"
+    },
+    {
+      title: "Fencing & Security Solutions",
+      description: "Complete fencing installation and security system implementation.",
+      features: ["Electric Fencing", "Palisade Fencing", "Razor Wire Fencing", "Security Solutions"],
       icon: "🔒"
-    },
-    {
-      title: "Mining & Construction Equipment",
-      description: "Specialized equipment hire and supply for mining and construction projects.",
-      features: ["Heavy Machinery", "Construction Tools", "Mining Equipment", "Technical Support"],
-      icon: "🏗️"
     }
   ];
 
@@ -50,7 +51,7 @@ const ServicesSection = () => {
             Our Services
           </h2>
           <p className="font-inter text-lg text-muted-foreground max-w-3xl mx-auto">
-            We offer comprehensive solutions across engineering, construction, technology, and consultation services tailored to meet the diverse needs of our Witbank community and beyond.
+            Comprehensive solutions for mining, engineering, and business consulting needs across South Africa.
           </p>
         </div>
 
@@ -69,7 +70,7 @@ const ServicesSection = () => {
                 <p className="font-inter text-muted-foreground leading-relaxed">
                   {service.description}
                 </p>
-                <ul className="space-y-2">
+                <ul className="space-y-2 mb-4">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-sm text-foreground">
                       <svg className="w-4 h-4 text-accent mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -79,6 +80,16 @@ const ServicesSection = () => {
                     </li>
                   ))}
                 </ul>
+                <Button variant="outline" size="sm" className="mt-2" asChild>
+                  <a 
+                    href={createServiceWhatsAppLink(service.title)} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2"
+                  >
+                    📱 Request via WhatsApp
+                  </a>
+                </Button>
               </CardContent>
             </Card>
           ))}

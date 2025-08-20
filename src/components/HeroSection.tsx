@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import heroImage from "@/assets/hero-construction.jpg";
 import siyaleleLogo from "@/assets/siyalele-logo.png";
+import { createWhatsAppLink } from "@/lib/whatsapp";
 
 const HeroSection = () => {
   return (
@@ -24,22 +26,42 @@ const HeroSection = () => {
           Siyalele Projects
         </h1>
         
-        <p className="font-inter text-xl md:text-2xl mb-4 font-light max-w-3xl mx-auto">
-          Building Excellence in Witbank, Mpumalanga
+        <p className="font-inter text-xl md:text-2xl mb-4 font-light max-w-4xl mx-auto">
+          Innovative Mining & Engineering Solutions, Delivered with Excellence
         </p>
         
-        <p className="font-inter text-lg md:text-xl mb-12 opacity-90 max-w-2xl mx-auto">
-          Professional construction and maintenance services you can trust. 
-          Established 2023, locally owned, VAT registered.
+        <p className="font-inter text-lg md:text-xl mb-8 opacity-90 max-w-3xl mx-auto">
+          Your trusted partner for mining supply, engineering, maintenance, and professional consulting services across South Africa.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button variant="hero" size="xl" className="min-w-48">
-            Get A Quote
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+          <Button variant="hero" size="xl" className="min-w-48" asChild>
+            <a 
+              href={createWhatsAppLink("Hello! I would like to request a quote for your services.")} 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              Chat with us on WhatsApp
+            </a>
           </Button>
-          <Button variant="outline" size="xl" className="min-w-48 bg-white/10 border-white/30 text-white hover:bg-white/20">
-            Our Services
+          <Button variant="outline" size="xl" className="min-w-48 bg-white/10 border-white/30 text-white hover:bg-white/20" asChild>
+            <a href="#contact">
+              Request a Quote
+            </a>
           </Button>
+        </div>
+        
+        {/* Credibility Badges */}
+        <div className="flex flex-wrap justify-center gap-4">
+          <Badge variant="secondary" className="bg-white/20 text-white border-white/30 hover:bg-white/30 px-4 py-2 text-sm font-medium">
+            💼 100% Black-Owned
+          </Badge>
+          <Badge variant="secondary" className="bg-white/20 text-white border-white/30 hover:bg-white/30 px-4 py-2 text-sm font-medium">
+            🌟 Youth-Led Company
+          </Badge>
+          <Badge variant="secondary" className="bg-white/20 text-white border-white/30 hover:bg-white/30 px-4 py-2 text-sm font-medium">
+            ✅ CSD Verified Supplier
+          </Badge>
         </div>
       </div>
       

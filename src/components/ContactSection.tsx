@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { createWhatsAppLink } from "@/lib/whatsapp";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -33,14 +34,14 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="py-20 bg-earth-gradient">
+    <section id="contact" className="py-20 bg-earth-gradient">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-poppins text-4xl md:text-5xl font-bold text-primary mb-6">
-            Contact & Location
+            Get In Touch
           </h2>
           <p className="font-inter text-lg text-muted-foreground max-w-3xl mx-auto">
-            Ready to discuss your project? Get in touch with us today for a free consultation and quote.
+            Ready to start your project? Contact us today for professional mining, engineering, and consulting solutions.
           </p>
         </div>
 
@@ -118,7 +119,7 @@ const ContactSection = () => {
             <Card className="shadow-construction">
               <CardHeader>
                 <CardTitle className="font-poppins text-2xl text-primary">
-                  Visit Our Office
+                  Our Address
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -129,10 +130,10 @@ const ContactSection = () => {
                   <div>
                     <p className="font-semibold text-primary">Address:</p>
                     <p className="font-inter text-muted-foreground">
-                      Monet Street, Ben Fleur<br />
-                      Arabella Villas, House No. 9<br />
-                      Witbank (Emalahleni), 3364<br />
-                      Mpumalanga, South Africa
+                      Miroh at Aurora | 16 @ Birchwood<br />
+                      Aston Manor, Kempton Park<br />
+                      Johannesburg, 1620<br />
+                      South Africa
                     </p>
                   </div>
                 </div>
@@ -142,8 +143,9 @@ const ContactSection = () => {
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                   </svg>
                   <div>
-                    <p className="font-semibold text-primary">Phone:</p>
-                    <p className="font-inter text-muted-foreground">(073) 217-8184 / (060) 722-6173</p>
+                    <p className="font-semibold text-primary">Phone Numbers:</p>
+                    <p className="font-inter text-muted-foreground">+27 72 217 6184</p>
+                    <p className="font-inter text-muted-foreground">+27 65 072 9925</p>
                   </div>
                 </div>
 
@@ -153,8 +155,8 @@ const ContactSection = () => {
                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                   </svg>
                   <div>
-                    <p className="font-semibold text-primary">Email:</p>
-                    <p className="font-inter text-muted-foreground">Siyalele.pty.ltd@gmail.com</p>
+                    <p className="font-semibold text-primary">Email Address:</p>
+                    <p className="font-inter text-muted-foreground">Siyalele.mr7@gmail.com</p>
                   </div>
                 </div>
 
@@ -167,6 +169,19 @@ const ContactSection = () => {
                     <p className="font-inter text-muted-foreground">Eskom Vendor: 11094569</p>
                   </div>
                 </div>
+
+                <div className="mt-6">
+                  <Button variant="hero" className="w-full" asChild>
+                    <a 
+                      href={createWhatsAppLink("Hello! I would like to discuss a project with your team.")} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2"
+                    >
+                      📱 Chat on WhatsApp
+                    </a>
+                  </Button>
+                </div>
               </CardContent>
             </Card>
 
@@ -178,20 +193,23 @@ const ContactSection = () => {
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="flex justify-between">
-                  <span className="font-medium text-primary">Monday - Friday:</span>
-                  <span className="text-muted-foreground">8:00 AM - 5:00 PM</span>
+                  <span className="font-medium text-primary">Mon – Fri:</span>
+                  <span className="text-muted-foreground">8:00 AM – 5:00 PM</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="font-medium text-primary">Saturday:</span>
-                  <span className="text-muted-foreground">8:00 AM - 1:00 PM</span>
+                  <span className="font-medium text-primary">Saturdays:</span>
+                  <span className="text-muted-foreground">8:00 AM – 1:00 PM</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="font-medium text-primary">Sunday:</span>
-                  <span className="text-muted-foreground">Emergency Only</span>
+                  <span className="text-muted-foreground">Closed</span>
                 </div>
                 <div className="mt-4 p-4 bg-accent/10 rounded-lg">
                   <p className="text-sm text-accent font-medium">
-                    24/7 Emergency Services Available
+                    Quick Contact: Call +27 72 217 6184
+                  </p>
+                  <p className="text-xs text-muted-foreground mt-1">
+                    Email: Siyalele.mr7@gmail.com
                   </p>
                 </div>
               </CardContent>
@@ -205,7 +223,7 @@ const ContactSection = () => {
                     <svg className="w-12 h-12 text-accent mx-auto mb-3" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                     </svg>
-                    <p className="text-primary font-medium">Witbank, Mpumalanga</p>
+                    <p className="text-primary font-medium">Kempton Park / Johannesburg</p>
                     <p className="text-sm text-muted-foreground">Interactive map coming soon</p>
                   </div>
                 </div>
