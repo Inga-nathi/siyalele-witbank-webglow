@@ -14,10 +14,10 @@ const ClientsSection = () => {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="font-poppins text-4xl md:text-5xl font-bold text-primary mb-6">
-            Clients We've Worked With
+            Trusted by Leading Organizations
           </h2>
           <p className="font-inter text-lg text-muted-foreground max-w-3xl mx-auto">
-            Trusted by leading organizations across South Africa's mining, energy, and social development sectors.
+            We're proud to work with these industry leaders
           </p>
         </div>
 

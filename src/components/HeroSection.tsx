@@ -23,30 +23,26 @@ const HeroSection = () => {
           />
         </div>
         <h1 className="font-poppins text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-          Siyalele Projects
+          Innovative Mining & Engineering Solutions, <span className="text-cyan-400">Delivered with Excellence</span>
         </h1>
         
-        <p className="font-inter text-xl md:text-2xl mb-4 font-light max-w-4xl mx-auto">
-          Innovative Mining & Engineering Solutions, Delivered with Excellence
-        </p>
-        
         <p className="font-inter text-lg md:text-xl mb-8 opacity-90 max-w-3xl mx-auto">
-          Your trusted partner for mining supply, engineering, maintenance, and professional consulting services across South Africa.
+          Your trusted partner for mining supply, engineering maintenance, and professional consulting services across South Africa.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
           <Button variant="hero" size="xl" className="min-w-48" asChild>
             <a 
-              href={createWhatsAppLink("Hello! I would like to request a quote for your services.")} 
+              href={createWhatsAppLink("Hello Siyalele Projects, I would like to get a quote")} 
               target="_blank" 
               rel="noopener noreferrer"
             >
-              Chat with us on WhatsApp
+              Get A Quote
             </a>
           </Button>
           <Button variant="outline" size="xl" className="min-w-48 bg-white/10 border-white/30 text-white hover:bg-white/20" asChild>
-            <a href="#contact">
-              Request a Quote
+            <a href="#services">
+              Our Services
             </a>
           </Button>
         </div>
@@ -55,12 +51,15 @@ const HeroSection = () => {
         <div className="flex flex-wrap justify-center gap-4">
           <Badge variant="secondary" className="bg-white/20 text-white border-white/30 hover:bg-white/30 px-4 py-2 text-sm font-medium">
             💼 100% Black-Owned
+            <span className="block text-xs">Certified Business</span>
           </Badge>
           <Badge variant="secondary" className="bg-white/20 text-white border-white/30 hover:bg-white/30 px-4 py-2 text-sm font-medium">
             🌟 Youth-Led Company
+            <span className="block text-xs">50% Female Directors</span>
           </Badge>
           <Badge variant="secondary" className="bg-white/20 text-white border-white/30 hover:bg-white/30 px-4 py-2 text-sm font-medium">
-            ✅ CSD Verified Supplier
+            ✅ CSD Verified
+            <span className="block text-xs">MAAA1487648</span>
           </Badge>
         </div>
       </div>

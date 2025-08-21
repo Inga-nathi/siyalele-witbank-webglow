@@ -11,7 +11,13 @@ const AboutSection = () => {
             About Siyalele Projects
           </h2>
           <p className="font-inter text-lg text-muted-foreground max-w-4xl mx-auto">
-            Siyalele Projects is a 100% black-owned, youth-led company established with the vision to transform the mining, engineering, and consulting industries. We are committed to delivering innovative, efficient, and sustainable solutions that meet the evolving needs of our clients. With a strong focus on excellence, empowerment, and innovation, we strive to become a trusted partner for businesses across South Africa.
+            Siyalele Projects is a <strong>100% black-owned, youth-led company</strong> established in 2023 with a vision to drive innovation, empowerment, and sustainable business solutions across the mining and engineering sectors.
+          </p>
+          <p className="font-inter text-lg text-muted-foreground max-w-4xl mx-auto mt-4">
+            Our leadership team consists of <strong>50% black female and 50% black male directors</strong>, bringing diverse perspectives and expertise to deliver exceptional value to our clients while promoting transformation in the industry.
+          </p>
+          <p className="font-inter text-lg text-muted-foreground max-w-4xl mx-auto mt-4">
+            We focus on delivering reliable mining, engineering, and consulting services while driving sustainability, empowerment, and client satisfaction at every level of our operations.
           </p>
         </div>
 
@@ -22,7 +28,7 @@ const AboutSection = () => {
                 Our Company
               </h3>
               <p className="font-inter text-muted-foreground leading-relaxed mb-4">
-                Our expertise spans across multiple industries, providing end-to-end solutions in Mining & Construction Supply, Engineering & Maintenance, Consulting Services, and General Supply. We pride ourselves on our ability to deliver quality services that foster client satisfaction and long-term business growth.
+                We focus on delivering reliable mining, engineering, and consulting services while driving sustainability, empowerment, and client satisfaction through innovative solutions and exceptional service delivery.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 <Badge variant="secondary" className="bg-accent/10 text-accent border-accent/20">
@@ -43,28 +49,29 @@ const AboutSection = () => {
                 <div className="flex items-start gap-4">
                   <div className="w-4 h-4 bg-accent rounded-full mt-1 flex-shrink-0"></div>
                   <div>
-                    <h4 className="font-semibold text-foreground">2022 – Company Establishment</h4>
+                    <h4 className="font-semibold text-foreground">2023 – Company Establishment</h4>
+                    <p className="text-sm text-muted-foreground">Founded as 100% black-owned business</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-4 h-4 bg-accent rounded-full mt-1 flex-shrink-0"></div>
                   <div>
                     <h4 className="font-semibold text-foreground">2023 – Rapid Growth</h4>
-                    <p className="text-sm text-muted-foreground">Expanded service offerings with a client base across multiple industries</p>
+                    <p className="text-sm text-muted-foreground">Expanded service offerings and client base</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-4 h-4 bg-accent rounded-full mt-1 flex-shrink-0"></div>
                   <div>
-                    <h4 className="font-semibold text-foreground">2024 – Strengthened Partnerships</h4>
-                    <p className="text-sm text-muted-foreground">Established long-term supplier and client relationships</p>
+                    <h4 className="font-semibold text-foreground">2024 – Strategic Partnerships</h4>
+                    <p className="text-sm text-muted-foreground">Built strong industry relationships</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-4 h-4 bg-primary rounded-full mt-1 flex-shrink-0"></div>
                   <div>
-                    <h4 className="font-semibold text-foreground">2025 – Scaling Operations</h4>
-                    <p className="text-sm text-muted-foreground">Expanded reach across South Africa</p>
+                    <h4 className="font-semibold text-foreground">Future – Continued Expansion</h4>
+                    <p className="text-sm text-muted-foreground">Scaling operations across South Africa</p>
                   </div>
                 </div>
               </div>
@@ -78,27 +85,27 @@ const AboutSection = () => {
               <div className="grid sm:grid-cols-2 gap-3">
                 <div className="bg-white/60 p-4 rounded-lg">
                   <p className="text-sm text-muted-foreground">Company Registration</p>
-                  <p className="font-semibold text-foreground">2022/609469/07</p>
+                  <p className="font-semibold text-foreground">2023/000257/07</p>
                 </div>
                 <div className="bg-white/60 p-4 rounded-lg">
-                  <p className="text-sm text-muted-foreground">Tax Clearance</p>
-                  <p className="font-semibold text-foreground">Compliant</p>
-                </div>
-                <div className="bg-white/60 p-4 rounded-lg">
-                  <p className="text-sm text-muted-foreground">CSD Registered</p>
-                  <p className="font-semibold text-foreground">MAAN0476474</p>
-                </div>
-                <div className="bg-white/60 p-4 rounded-lg">
-                  <p className="text-sm text-muted-foreground">B-BBEE Status</p>
-                  <p className="font-semibold text-foreground">Level 1 Contributor</p>
-                </div>
-                <div className="bg-white/60 p-4 rounded-lg">
-                  <p className="text-sm text-muted-foreground">CIDB</p>
-                  <p className="font-semibold text-foreground">Grading in process</p>
+                  <p className="text-sm text-muted-foreground">CSD Verification</p>
+                  <p className="font-semibold text-foreground">MAAA1487648</p>
                 </div>
                 <div className="bg-white/60 p-4 rounded-lg">
                   <p className="text-sm text-muted-foreground">Eskom Vendor</p>
                   <p className="font-semibold text-foreground">11094569</p>
+                </div>
+                <div className="bg-white/60 p-4 rounded-lg">
+                  <p className="text-sm text-muted-foreground">Tax Clearance</p>
+                  <p className="font-semibold text-foreground">9279622253</p>
+                </div>
+                <div className="bg-white/60 p-4 rounded-lg">
+                  <p className="text-sm text-muted-foreground">VAT Number</p>
+                  <p className="font-semibold text-foreground">4410317988</p>
+                </div>
+                <div className="bg-white/60 p-4 rounded-lg">
+                  <p className="text-sm text-muted-foreground">Banking</p>
+                  <p className="font-semibold text-foreground">ABSA Business Account</p>
                 </div>
               </div>
             </div>
@@ -106,17 +113,26 @@ const AboutSection = () => {
             {/* Vision & Mission */}
             <div>
               <h3 className="font-poppins text-2xl font-semibold text-primary mb-4">
-                Our Vision
+                Vision & Mission
               </h3>
-              <p className="font-inter text-muted-foreground leading-relaxed mb-6">
-                "To be the company of choice to major clients and a leading provider of innovative solutions while consistently delivering exceptional value."
+              <p className="text-lg text-muted-foreground mb-6">
+                Guiding principles that drive our commitment to excellence and innovation
               </p>
             </div>
 
             <div>
-              <h3 className="font-poppins text-2xl font-semibold text-primary mb-4">
+              <h4 className="font-poppins text-xl font-semibold text-primary mb-3">
+                Our Vision
+              </h4>
+              <blockquote className="font-inter text-muted-foreground leading-relaxed mb-6 italic border-l-4 border-accent pl-4">
+                "To be the company of choice to major clients and a leading provider of innovative solutions while consistently delivering exceptional value."
+              </blockquote>
+            </div>
+
+            <div>
+              <h4 className="font-poppins text-xl font-semibold text-primary mb-3">
                 Our Mission
-              </h3>
+              </h4>
               <p className="font-inter text-muted-foreground leading-relaxed mb-6">
                 Delivering reliable mining, engineering, and consulting services while driving sustainability, empowerment, and client satisfaction through innovative solutions and exceptional service delivery.
               </p>
@@ -176,14 +192,14 @@ const AboutSection = () => {
                       Siyabulela Gumede – Managing Director
                     </h4>
                     <p className="font-inter text-muted-foreground mb-4">
-                      Visionary leader driving strategic growth and operational excellence. Committed to sustainable transformation.
+                      Visionary leader driving strategic growth and operational excellence. Committed to innovation and sustainable business development.
                     </p>
                     <div>
                       <p className="font-semibold text-sm text-foreground mb-2">Key Expertise:</p>
                       <ul className="text-sm text-muted-foreground space-y-1">
-                        <li>• Business Strategy</li>
-                        <li>• Operations Management</li>
-                        <li>• Leadership Development</li>
+                        <li>• Business Leadership</li>
+                        <li>• Strategic Planning</li>
+                        <li>• Industry Expertise</li>
                       </ul>
                     </div>
                   </CardContent>
@@ -192,17 +208,17 @@ const AboutSection = () => {
                 <Card className="border-2 border-secondary">
                   <CardContent className="p-6">
                     <h4 className="font-poppins text-xl font-semibold text-primary mb-2">
-                      Siphesihle Gumede – Operations Director
+                      Siphesihle Gumede – Director
                     </h4>
                     <p className="font-inter text-muted-foreground mb-4">
-                      Experienced professional focused on client relationships and operational excellence. Passionate about delivering impactful solutions.
+                      Experienced professional focused on client relationships and service delivery excellence. Passionate about transformation and empowerment.
                     </p>
                     <div>
                       <p className="font-semibold text-sm text-foreground mb-2">Key Expertise:</p>
                       <ul className="text-sm text-muted-foreground space-y-1">
-                        <li>• Client Relationship Management</li>
+                        <li>• Client Relations</li>
+                        <li>• Service Excellence</li>
                         <li>• Business Development</li>
-                        <li>• Operations Excellence</li>
                       </ul>
                     </div>
                   </CardContent>
@@ -213,7 +229,7 @@ const AboutSection = () => {
                     Leadership Commitment
                   </h4>
                   <p className="font-inter text-muted-foreground mb-4">
-                    Our leadership team embodies youthful energy, resilience, and unwavering commitment to clients and partners. Together, we are building a future that is sustainable and inclusive while driving business excellence.
+                    Our leadership team embodies <strong>youthful energy, resilience, and unwavering commitment</strong> to client growth and success. Together, we drive innovation while maintaining the highest standards of service delivery and business ethics.
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <Badge variant="secondary" className="bg-accent text-white">

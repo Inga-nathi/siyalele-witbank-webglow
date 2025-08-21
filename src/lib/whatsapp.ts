@@ -3,8 +3,8 @@
  */
 
 export const WHATSAPP_NUMBERS = {
-  primary: '+27722176184',
-  secondary: '+27650729925'
+  primary: '+27732178184',
+  secondary: '+27607226173'
 } as const;
 
 export const createWhatsAppLink = (
