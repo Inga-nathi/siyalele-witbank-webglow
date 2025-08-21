@@ -1,6 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { createServiceWhatsAppLink } from "@/lib/whatsapp";
 import { Link } from "react-router-dom";
 
 const ServicesSection = () => {
@@ -81,14 +80,12 @@ const ServicesSection = () => {
                   ))}
                 </ul>
                 <Button variant="outline" size="sm" className="mt-2" asChild>
-                  <a 
-                    href={createServiceWhatsAppLink(service.title)} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
+                  <Link 
+                    to={`/#contact?service=${encodeURIComponent(service.title)}`}
                     className="inline-flex items-center gap-2"
                   >
-                    📱 Request via WhatsApp
-                  </a>
+                    📋 Get Quote
+                  </Link>
                 </Button>
               </CardContent>
             </Card>
@@ -104,7 +101,7 @@ const ServicesSection = () => {
               Contact us today for a free consultation and detailed quote for your construction or maintenance needs.
             </p>
             <Button variant="professional" size="xl" asChild>
-              <Link to="/services">View All Services</Link>
+              <Link to="/#contact">Get Quote</Link>
             </Button>
           </div>
         </div>

@@ -1,29 +1,82 @@
 import { useState } from "react";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { createWhatsAppLink } from "@/lib/whatsapp";
 
 const ContactSection = () => {
+  const location = useLocation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
+    service: "",
     message: ""
   });
   const { toast } = useToast();
 
+  useEffect(() => {
+    // Check for service parameter in URL
+    const urlParams = new URLSearchParams(location.search);
+    const serviceParam = urlParams.get('service');
+    if (serviceParam) {
+      setFormData(prev => ({
+        ...prev,
+        service: serviceParam
+      }));
+    }
+  }, [location]);
+
+  const services = [
+    "Mining & Construction Supply",
+    "General Engineering & Maintenance", 
+    "HR Consultation & Social Labour Plan (SLP) Services",
+    "Environmental Management",
+    "Contract Catering & Conferencing Equipment",
+    "Fencing & Security Solutions",
+    "Consultation",
+    "Other"
+  ];
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // For demo purposes, show success toast
+    
+    // Create email content
+    const emailSubject = `Quote Request - ${formData.service || 'General Inquiry'}`;
+    const emailBody = `
+New Quote Request from ${formData.name}
+
+Contact Information:
+- Name: ${formData.name}
+- Email: ${formData.email}
+- Phone: ${formData.phone}
+- Service: ${formData.service}
+
+Project Details:
+${formData.message}
+
+Please respond to this quote request as soon as possible.
+    `.trim();
+
+    // Create mailto link
+    const mailtoLink = `mailto:siyalele.mr7@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
     toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you within 24 hours.",
+      title: "Quote Request Prepared!",
+      description: "Your email client should open with the quote request. Please send the email to complete your request.",
     });
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    
+    // Reset form
+    setFormData({ name: "", email: "", phone: "", service: "", message: "" });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -33,15 +86,22 @@ const ContactSection = () => {
     }));
   };
 
+  const handleServiceChange = (value: string) => {
+    setFormData(prev => ({
+      ...prev,
+      service: value
+    }));
+  };
+
   return (
     <section id="contact" className="py-20 bg-earth-gradient">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-poppins text-4xl md:text-5xl font-bold text-primary mb-6">
-            Get In Touch
+            Get Your Quote
           </h2>
           <p className="font-inter text-lg text-muted-foreground max-w-3xl mx-auto">
-            Ready to start your project? Contact us today for professional mining, engineering, and consulting solutions.
+            Ready to start your project? Get a detailed quote for our professional mining, engineering, and consulting solutions.
           </p>
         </div>
 
@@ -50,7 +110,7 @@ const ContactSection = () => {
           <Card className="shadow-construction">
             <CardHeader>
               <CardTitle className="font-poppins text-2xl text-primary">
-                Get A Free Quote
+                Request Your Quote
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -81,6 +141,22 @@ const ContactSection = () => {
                 </div>
                 
                 <div className="space-y-2">
+                  <Label htmlFor="service">Service Required *</Label>
+                  <Select value={formData.service} onValueChange={handleServiceChange} required>
+                    <SelectTrigger className="focus:ring-accent focus:border-accent">
+                      <SelectValue placeholder="Select a service" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {services.map((service) => (
+                        <SelectItem key={service} value={service}>
+                          {service}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div className="space-y-2">
                   <Label htmlFor="email">Email Address *</Label>
                   <Input
                     id="email"
@@ -102,13 +178,13 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    placeholder="Tell us about your project, timeline, and any specific requirements..."
+                    placeholder="Please provide details about your project, timeline, budget range, and any specific requirements..."
                     className="focus:ring-accent focus:border-accent resize-none"
                   />
                 </div>
 
                 <Button type="submit" variant="professional" size="lg" className="w-full">
-                  Send Message
+                  Request Quote
                 </Button>
               </form>
             </CardContent>

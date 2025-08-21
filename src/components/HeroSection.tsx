@@ -32,11 +32,7 @@ const HeroSection = () => {
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
           <Button variant="hero" size="xl" className="min-w-48" asChild>
-            <a 
-              href={createWhatsAppLink("Hello Siyalele Projects, I would like to get a quote")} 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
+            <a href="#contact">
               Get A Quote
             </a>
           </Button>

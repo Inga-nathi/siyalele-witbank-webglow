@@ -2,7 +2,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { createServiceWhatsAppLink } from "@/lib/whatsapp";
 
 const Services = () => {
   const serviceCategories = [
@@ -189,14 +188,12 @@ const Services = () => {
                   
                   <div className="pt-4 border-t border-border">
                     <Button variant="outline" className="w-full" asChild>
-                      <a 
-                        href={createServiceWhatsAppLink(category.title)} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
+                      <Link 
+                        to={`/#contact?service=${encodeURIComponent(category.title)}`}
                         className="inline-flex items-center gap-2"
                       >
-                        📱 Request via WhatsApp
-                      </a>
+                        📋 Get Quote
+                      </Link>
                     </Button>
                   </div>
                 </CardContent>
@@ -217,16 +214,12 @@ const Services = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="xl" asChild>
-              <Link to="/#contact">Request Quote</Link>
+              <Link to="/#contact">Get Quote</Link>
             </Button>
             <Button variant="outline" size="xl" asChild>
-              <a 
-                href={createServiceWhatsAppLink("I would like to schedule a consultation")} 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
+              <Link to="/#contact?service=Consultation">
                 Schedule Consultation
-              </a>
+              </Link>
             </Button>
           </div>
         </div>
